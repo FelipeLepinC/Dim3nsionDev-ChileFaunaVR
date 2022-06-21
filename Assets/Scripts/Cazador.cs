@@ -30,6 +30,7 @@ public class Cazador : MonoBehaviour
     public Transform target;
     NavMeshAgent nav;
     private bool visto = false;
+    public TimeController tiempo;
 
     // Animaciones
     Animator animator;
@@ -156,10 +157,12 @@ public class Cazador : MonoBehaviour
     {
         if (player.gameObject.layer == 8)
         {
+
             Debug.Log("Han pillado al jugador");
             controller.enabled = false;
             perseguido.transform.position = new Vector3(680.26f, 144.70f, 423.88f);
             controller.enabled = true;
+            tiempo.GetComponent<TimeController>().pillado();
             ui_contador.GetComponent<AppleCounter>().Reset();
         }
     }

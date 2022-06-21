@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 #endif
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 namespace StarterAssets
 {
 	[RequireComponent(typeof(CharacterController))]
@@ -15,6 +16,8 @@ namespace StarterAssets
 		public AppleCounter ui_contador;
 		private int manzanas;
 		private bool boost;
+		public bool finished;
+		public TimeController tiempo;
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -101,6 +104,7 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			finished = false;
 			boost = false;
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
@@ -120,9 +124,6 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			//if (Input.GetKeyDown("y")){
-			//	Boost();
-			//}
 
 			//Edit de Seba//
 			if (Input.GetKeyDown(KeyCode.R)){
@@ -136,6 +137,12 @@ namespace StarterAssets
 			   }
          	   
         	}
+
+			if (tiempo.GetComponent<TimeController>().finished == true){
+				if (Input.GetKeyDown(KeyCode.Return)){
+					SceneManager.LoadScene("MainMenu");
+				}
+			}
 			//Edit de Seba//
 		}
 
