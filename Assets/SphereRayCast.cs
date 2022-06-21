@@ -25,7 +25,6 @@ public class SphereRayCast : MonoBehaviour
         Apples = Physics.OverlapSphere(this.transform.position, radius);
         foreach(Collider apple in Apples){
             if (apple.tag == "Player"){
-                Debug.Log("XDDDD");
                 ui_contador.GetComponent<AppleCounter>().InHome();
             }
             

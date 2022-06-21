@@ -21,7 +21,7 @@ public class Cazador : MonoBehaviour
     public Vector3 direccionPersecucion;
     public GameObject perseguido;
     public AppleCounter interfaz;
-
+    public TimeController tiempo;
     public FieldOfView campoVision;
 
     Rigidbody rb;
@@ -157,6 +157,7 @@ public class Cazador : MonoBehaviour
         if (player.gameObject.layer == 8)
         {
             Debug.Log("Han pillado al jugador");
+            tiempo.GetComponent<TimeController>().pillado();
             controller.enabled = false;
             perseguido.transform.position = new Vector3(680.26f, 144.70f, 423.88f);
             controller.enabled = true;

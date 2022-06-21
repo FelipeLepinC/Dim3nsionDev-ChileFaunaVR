@@ -1101,8 +1101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4412f0f870e7c45b3d356d4d0b4f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 1
-  seg: 0
+  min: 0
+  seg: 20
   tiempo: {fileID: 141783729}
   mensaje: {fileID: 1682166595}
   puntaje: {fileID: 436043499}
@@ -3363,6 +3363,7 @@ MonoBehaviour:
   direccionPersecucion: {x: 0, y: 0, z: 0}
   perseguido: {fileID: 630426706}
   interfaz: {fileID: 37528375}
+  tiempo: {fileID: 180205057}
   campoVision: {fileID: 1379747593}
   target: {fileID: 630426720}
   madriguera: {fileID: 1248474308}
