@@ -30,6 +30,8 @@ public class Cazador : MonoBehaviour
     public Transform target;
     NavMeshAgent nav;
     private bool visto = false;
+    private bool perdido;
+    private bool trapped;
 
     // Animaciones
     Animator animator;
@@ -46,6 +48,8 @@ public class Cazador : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        perdido = true;
+        trapped = false;
     }
 
     // Update is called once per frame
@@ -53,40 +57,46 @@ public class Cazador : MonoBehaviour
     {
         if (campoVision.GetComponent<FieldOfView>().visibleTargets.Count == 0)
         {
-            if (visto == true){
-                rb.velocity = new Vector3(0f, 0f, 0f);
-                nav.ResetPath();
+            if (visto == true && perdido == false){
+                //nav.ResetPath();
+                StartCoroutine(perdiendo());
             }
-            visto = false;
-            interfaz.GetComponent<AppleCounter>().not_persued();
-            if (isWandering == false)
-            {
-                StartCoroutine(Wander());
-            }
-            if (isRotationRight == true)
-            {
-                rb.velocity = new Vector3(0f, 0f, 0f);
-                transform.Rotate(transform.up * Time.deltaTime * rotationSpeed);
+            if (perdido == true){
+                trapped = false;
+                visto = false;
+                interfaz.GetComponent<AppleCounter>().not_persued();
                 
+                if (isWandering == false)
+                {
+                    
+                    StartCoroutine(Wander());
+                }
+                if (isRotationRight == true)
+                {
+                    rb.velocity = new Vector3(0f, 0f, 0f);
+                    transform.Rotate(transform.up * Time.deltaTime * rotationSpeed);
+                    
+                }
+                if (isRotationLeft == true)
+                {
+                    rb.velocity = new Vector3(0f, 0f, 0f);
+                    transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
+                }
+                if (isWalking == true)
+                {
+                    rb.AddForce(transform.forward * movementSpeed);
+                    animator.SetBool("isRunning", true);
+                }
+                if (isWalking == false)
+                {
+                    animator.SetBool("isRunning", false);
+                }
             }
-            if (isRotationLeft == true)
-            {
-                rb.velocity = new Vector3(0f, 0f, 0f);
-                transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
-            }
-            if (isWalking == true)
-            {
-                rb.AddForce(transform.forward * movementSpeed);
-                animator.SetBool("isRunning", true);
-            }
-            if (isWalking == false)
-            {
-                animator.SetBool("isRunning", false);
-            }
-        }
-        else
-        {
             
+        }
+        else if (trapped == false)
+        {
+            perdido = false;
             if (visto == false){
                 //rb.AddForce(-(transform.forward * movementSpeed));
                 rb.velocity = new Vector3(0f, 0f, 0f);
@@ -99,6 +109,19 @@ public class Cazador : MonoBehaviour
         }
     }
 
+    IEnumerator perdiendo(){
+       
+        yield return new WaitForSeconds(1);
+        Debug.Log(perdido);
+        perseguir();
+        while(perdido == false){
+            yield return new WaitForSeconds(4);
+            perdido = true;
+        }
+        rb.velocity = new Vector3(0f, 0f, 0f);
+        nav.ResetPath();
+        
+    }
     // Modo errante
     IEnumerator Wander()
     {
@@ -156,10 +179,14 @@ public class Cazador : MonoBehaviour
     {
         if (player.gameObject.layer == 8)
         {
+            trapped = true;
+            perdido = true;
+            nav.ResetPath();
+            interfaz.GetComponent<AppleCounter>().not_persued();
             Debug.Log("Han pillado al jugador");
             tiempo.GetComponent<TimeController>().pillado();
             controller.enabled = false;
-            perseguido.transform.position = new Vector3(680.26f, 144.70f, 423.88f);
+            perseguido.transform.position = new Vector3(-107.7f, 124.26f, 428.17f);
             controller.enabled = true;
             ui_contador.GetComponent<AppleCounter>().Reset();
         }
