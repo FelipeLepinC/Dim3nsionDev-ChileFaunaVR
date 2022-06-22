@@ -10,6 +10,7 @@ public class AppleCounter : MonoBehaviour
     public int counter;
     public int total;
     public Image alert;
+    public GameObject Sonido;
     //public FirstPersonController character;
     //public FirstPersonController controles;
     //private float nextActionTime = 0.0f;
@@ -67,6 +68,7 @@ public class AppleCounter : MonoBehaviour
     public void Apple(){
         counter += 1;
         PersonalCounter.text = "" + (int)counter;
+        Instantiate(Sonido);
     }
 
     public void InHome(){

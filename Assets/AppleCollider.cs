@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AppleCollider : MonoBehaviour
 {
+    
     public AppleCounter ui_contador;
     //private Rigidbody2D Rigidbody2D;
     // Start is called before the first frame update
