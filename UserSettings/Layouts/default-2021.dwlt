@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< Updated upstream
   m_Title: Game
+=======
+  m_Title: Project
+>>>>>>> Stashed changes
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +52,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 45
+=======
+  controlID: 87
+>>>>>>> Stashed changes
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +232,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 102
+=======
+  controlID: 88
+>>>>>>> Stashed changes
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +261,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 103
+=======
+  controlID: 89
+>>>>>>> Stashed changes
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -347,22 +363,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< Updated upstream
     - Assets/Sprites
+=======
+    - Assets
+>>>>>>> Stashed changes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< Updated upstream
   - Assets/Sprites
+=======
+  - Assets
+>>>>>>> Stashed changes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sherc\OneDrive\Documents\GitHub\Dim3nsionDev-ChileFaunaVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 259}
     m_SelectedIDs: de5f0000
     m_LastClickedID: 24542
     m_ExpandedIDs: 00000000fc5d0000d05f0000e45f0000c836010000ca9a3b
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f25d0000
+    m_LastClickedID: 24050
+    m_ExpandedIDs: 00000000f25d00000c5e000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -390,7 +421,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000fc5d0000
+=======
+    m_ExpandedIDs: 00000000f25d0000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -418,7 +453,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
+<<<<<<< Updated upstream
     m_ExpandedInstanceIDs: c6230000ec5e0000164d01003a580100a8a10200aea10200b4a10200baa102008acf000090cf0000ecda000048e600004ee60000ee5500008a5f00006042010018560000d64b01004ad201004ed2010052d2010056d20100
+=======
+    m_ExpandedInstanceIDs: c6230000ec5e0000164d01003a580100a8a10200aea10200b4a10200baa102008acf000090cf0000ecda000048e600004ee60000ee550000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -442,7 +481,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 77}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 235
@@ -481,7 +520,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 258
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -520,7 +559,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< Updated upstream
       m_ExpandedIDs: be84feff0e9dfeff78dbfeff4adffeff2aeffeff2ef8feff34fffeff44fffeff4afffeff7c06ffff2e0affff122bffff242bffff2c2bffff7235ffff843fffff8c52ffffdc5effffa66afffffecbffffc0cdffff26ceffff52ecffff06fbffff7c53000026540000a4540000b8540000586000000a6100008e610000048500003e8500006285000082850000f08500007486000088860000d0c2000030d00000c0df000006e000005ae000006c200100603601008e36010080d10100dad1010008d20100
+=======
+      m_ExpandedIDs: 7a97ffffee97ffff6298ffffb698ffffea9bffff2ca6fffff2a6ffff06fbffff785300008e530000985300001254000022540000a0540000ae540000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -769,9 +812,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 573.87024, y: 333.07764, z: 34.98175}
     speed: 2
     m_Value: {x: 573.87024, y: 333.07764, z: 34.98175}
+=======
+    m_Target: {x: 588.16156, y: 151.0242, z: 6.199707}
+    speed: 2
+    m_Value: {x: 588.16156, y: 151.0242, z: 6.199707}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -818,6 +867,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< Updated upstream
     m_Target: {x: -0.001810226, y: -0.008401884, z: 0.000020649228, w: -0.99998343}
     speed: 2
     m_Value: {x: -0.0018101891, y: -0.008401712, z: 0.000020648808, w: -0.99996305}
@@ -825,6 +875,15 @@ MonoBehaviour:
     m_Target: 345.53003
     speed: 2
     m_Value: 345.53003
+=======
+    m_Target: {x: 0.0033102687, y: -0.0045052012, z: 0.00001687339, w: 1.0000015}
+    speed: 2
+    m_Value: {x: 0.003310212, y: -0.004505124, z: 0.0000168731, w: 0.9999844}
+  m_Size:
+    m_Target: 511.04163
+    speed: 2
+    m_Value: 489.03506
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2
