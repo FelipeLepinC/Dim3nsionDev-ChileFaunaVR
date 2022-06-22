@@ -190,6 +190,9 @@ public class Cazador : MonoBehaviour
             controller.enabled = true;
             ui_contador.GetComponent<AppleCounter>().Reset();
         }
+        if (player.gameObject.tag == "Apple"){
+            Physics.IgnoreCollision(player.collider, GetComponent<Collider>());
+        }
     }
 
     private void perseguir(){
