@@ -235,6 +235,7 @@ MonoBehaviour:
   counter: 0
   total: 0
   alert: {fileID: 1417798736}
+  Sonido: {fileID: 9053082527400644565, guid: 20caffcee954a9940bf2d1782541b926, type: 3}
 --- !u!82 &37528379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1700,7 +1701,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
