@@ -60,6 +60,11 @@ public class TimeController : MonoBehaviour
             int tempSeg = Mathf.FloorToInt(restante % 60);
             tiempo.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
         }
+        if (finished == true){
+            if (Input.GetKeyDown(KeyCode.Return)){
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
     }
 
     IEnumerator puntuaciones(){

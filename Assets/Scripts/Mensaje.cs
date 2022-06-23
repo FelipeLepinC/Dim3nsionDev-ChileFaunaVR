@@ -28,7 +28,7 @@ public class Mensaje : MonoBehaviour
     }
 
     private void LimpiarMensajeTecla(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Tutorial");
     }
 
     private void OnTriggerEnter(Collider other){

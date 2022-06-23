@@ -8703,7 +8703,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 180205057, guid: 7c1de2525a12ae849ac9f008ce3200fd, type: 3}
       propertyPath: min
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 180205057, guid: 7c1de2525a12ae849ac9f008ce3200fd, type: 3}
       propertyPath: seg
