@@ -10,6 +10,7 @@ public class Mensaje : MonoBehaviour
     public string mensaje;
     public bool entro = false;
     private bool estadoMensaje;
+    private GUIStyle algo = new GUIStyle();
 
     void Start(){
         estadoMensaje = false;
@@ -17,7 +18,8 @@ public class Mensaje : MonoBehaviour
     
     void OnGUI(){
         if (entro && estadoMensaje){
-            GUI.Label(new Rect(Screen.width/2-100, 200, 200, 30), mensaje);
+            algo.fontSize = 100;
+            GUI.Label(new Rect(500, 800, 200, 30), mensaje, algo);
         }
 
         if(estadoMensaje){
